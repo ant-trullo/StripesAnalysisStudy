@@ -19,38 +19,16 @@ import PseudoCellsOrganize
 import TagsAndPositions
 
 
-
-# post_proc_folder  =  str(QtWidgets.QFileDialog.getExistingDirectory(None, "Select the analysis folder"))
-# raw_data_fname    =  str(QtWidgets.QFileDialog.getOpenFileName(None, "Select raw data file of the analyze", filter='*.czi *.tif *.lsm *.lif')[0])
-# flag_hor_vert     =  ["hor", "vert"][BinaryChoice.getFlag(["Choose between:", "Horizontal", "Vertical", "Work on horizontal strips", "Work on vertical strips", "Hor or Vert"])]
-# if os.path.isfile(post_proc_folder + '/pseudo_cells.npy') and os.path.isfile(post_proc_folder + '/pseudo_memb_cells.npy'):
-#     # flag_tssl_mbm  =  TesselsOrMembrane.getFlag()
-#     flag_tssl_mbm  =  ["tassels", "membrane"][BinaryChoice.getFlag(["Choose between:", "Tassels", "Membrane", "Work with tassels", "Work with membranes", "Hor or Vert"])]
-# elif not os.path.isfile(post_proc_folder + '/pseudo_cells.npy') and os.path.isfile(post_proc_folder + '/pseudo_memb_cells.npy'):
-#     flag_tssl_mbm  =  "membrane"
-# elif os.path.isfile(post_proc_folder + '/pseudo_cells.npy') and not os.path.isfile(post_proc_folder + '/pseudo_memb_cells.npy'):
-#     flag_tssl_mbm  =  "tassels"
-# if os.path.isfile(post_proc_folder + '/PseudoCytoPlasmSpots_info_a.xlsx') and os.path.isfile(post_proc_folder + '/PseudoCytoPlasmSpots_info_b.xlsx'):
-#     flag_a_b  =  ["_a", "_b"][BinaryChoice.getFlag(["Choose between:", "Spots a", "Spots b", "Work with spots a", "Work with spots b", "Spots a or b"])]
-# elif not os.path.isfile(post_proc_folder + '/PseudoCytoPlasmSpots_info_a.xlsx') and os.path.isfile(post_proc_folder + '/PseudoCytoPlasmSpots_info_b.xlsx'):
-#     flag_a_b  =  "_b"
-# elif os.path.isfile(post_proc_folder + '/PseudoCytoPlasmSpots_info_a.xlsx') and not os.path.isfile(post_proc_folder + '/PseudoCytoPlasmSpots_info_b.xlsx'):
-#     flag_a_b  =  "_a"
-# flag_a_b4visual  =  ["_a", "_b"][BinaryChoice.getFlag(["Choose between:", "Spots a", "Spots b", "Work with spots a", "Work with spots b", "Spots a or b"])]
-# mpp12       =  StripsAnalysisSpots(raw_data_fname, post_proc_folder, flag_tssl_mbm, flag_hor_vert, flag_a_b, flag_a_b4visual, self.soft_version)
-# self.mpp12.show()
-
-
-
 class StripsAnalysisSpots(QtWidgets.QWidget):
     """Popup tool to study activation in strips."""
-    def __init__(self, raw_data_fname, post_proc_folder, flag_tssl_mbm, flag_hor_vert, flag_a_b, flag_a_b4visual):
+    # def __init__(self, raw_data_fname, post_proc_folder, flag_tssl_mbm, flag_hor_vert, flag_a_b, flag_a_b4visual):
+    def __init__(self):
         QtWidgets.QWidget.__init__(self)
 
-        post_proc_folder  =  ''             # path of the folder with the analysis
-        raw_data_fname    =  ''             # path of the raw data file
+        post_proc_folder  =  '/home/atrullo/Dropbox/StripesAnalysisStudy/Analysis center'             # path of the folder with the analysis
+        raw_data_fname    =  '/home/atrullo/Dropbox/StripesAnalysisStudy/Analysis center/LM107_07052022_snaShaE_E1.tif'             # path of the raw data file
         flag_hor_vert     =  "hor"          # or "vert"  depending if you want horizontal or vertical strips
-        flag_tssl_mbm     =  "membrane"     # or "tassels" depending if you want to study on a meembrane analysis or a tassels (voronoi pseudo cells) analysis
+        flag_tssl_mbm     =  "tassels"      # membrane or "tassels" depending if you want to study on a meembrane analysis or a tassels (voronoi pseudo cells) analysis
         flag_a_b          =  "_a"           # if you want to study spots in the a channel of the analys or "_b" if in the b channel oof the analysis
         flag_a_b4visual   =  flag_a_b
 

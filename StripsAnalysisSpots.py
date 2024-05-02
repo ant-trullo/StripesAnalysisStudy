@@ -25,8 +25,8 @@ class StripsAnalysisSpots(QtWidgets.QWidget):
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
 
-        post_proc_folder  =  '/home/atrullo/Dropbox/StripesAnalysisStudy/Analysis center'             # path of the folder with the analysis
-        raw_data_fname    =  '/home/atrullo/Dropbox/StripesAnalysisStudy/Analysis center/LM107_07052022_snaShaE_E1.tif'             # path of the raw data file
+        post_proc_folder  =  'path to analysis folder'             # path of the folder with the analysis
+        raw_data_fname    =  'path to raw data'             # path of the raw data file
         flag_hor_vert     =  "hor"          # or "vert"  depending if you want horizontal or vertical strips
         flag_tssl_mbm     =  "tassels"      # membrane or "tassels" depending if you want to study on a meembrane analysis or a tassels (voronoi pseudo cells) analysis
         flag_a_b          =  "_a"           # if you want to study spots in the a channel of the analys or "_b" if in the b channel oof the analysis
